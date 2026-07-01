@@ -13,16 +13,19 @@ export function LocaleSwitcher() {
   const router = useRouter();
 
   return (
-    <div className="flex items-center gap-1 text-xs font-semibold" role="group" aria-label="Language">
+    <div className="flex items-center gap-0.5" role="group" aria-label="Language">
       {routing.locales.map((loc) => (
         <button
           key={loc}
           type="button"
+          lang={loc}
           onClick={() => router.replace(pathname, { locale: loc })}
           aria-current={loc === locale ? 'true' : undefined}
           className={cn(
-            'rounded-full px-2.5 py-1 transition',
-            loc === locale ? 'bg-cream text-maroon' : 'text-cream/70 hover:text-cream',
+            'px-1 py-0.5 text-xs transition',
+            loc === locale
+              ? 'text-ink underline decoration-maroon underline-offset-4'
+              : 'text-ink/50 hover:text-ink',
           )}
         >
           {LABELS[loc] ?? loc.toUpperCase()}

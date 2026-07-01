@@ -3,8 +3,9 @@ import type { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Archivo, Fraunces, Noto_Serif_Ethiopic } from 'next/font/google';
+import { Archivo, Archivo_Black, Noto_Sans_Ethiopic } from 'next/font/google';
 import { routing, isValidLocale } from '@/i18n/routing';
+import { Announcement } from '@/components/layout/announcement';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 
@@ -14,15 +15,16 @@ const sans = Archivo({
   display: 'swap',
 });
 
-const display = Fraunces({
+const display = Archivo_Black({
   subsets: ['latin'],
+  weight: '400',
   variable: '--font-display',
   display: 'swap',
 });
 
-const ethiopic = Noto_Serif_Ethiopic({
+const ethiopic = Noto_Sans_Ethiopic({
   subsets: ['ethiopic'],
-  weight: ['400', '500', '700'],
+  weight: ['500', '700'],
   variable: '--font-ethiopic',
   display: 'swap',
 });
@@ -67,7 +69,6 @@ export default async function LocaleLayout({
   if (!isValidLocale(locale)) {
     notFound();
   }
-  // Enable static rendering for this locale.
   setRequestLocale(locale);
 
   return (
@@ -77,6 +78,7 @@ export default async function LocaleLayout({
     >
       <body className="flex min-h-screen flex-col">
         <NextIntlClientProvider>
+          <Announcement />
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

@@ -8,75 +8,67 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-cream/10 bg-plum">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-4">
-        <div>
-          <p className="font-display text-2xl font-black leading-none">
-            Addis House
-            <br />
-            of Culture
-          </p>
-          <p className="mt-3 text-sm text-tan">{meta('tagline')}</p>
+    <footer className="bg-ink px-5 pb-10 pt-16 text-paper sm:px-10">
+      <div className="mx-auto max-w-shell">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+          <div>
+            <p className="font-display text-3xl uppercase leading-[0.95] tracking-tight">
+              Addis House
+              <br />
+              of Culture
+            </p>
+            <p className="mt-3.5 text-[13px] text-paper/60">
+              {meta('tagline')} · <span lang="am">አዲስ የባህል ቤት</span>
+            </p>
+          </div>
+
+          <FooterCol title={t('visit')}>
+            <FooterLink href="/whats-on">{nav('whatsOn')}</FooterLink>
+            <FooterLink href="/visit">{t('planVisit')}</FooterLink>
+            <FooterLink href="/visit">{t('accessibility')}</FooterLink>
+          </FooterCol>
+
+          <FooterCol title={t('explore')}>
+            <FooterLink href="/spaces">{nav('spaces')}</FooterLink>
+            <FooterLink href="/programs">{nav('programs')}</FooterLink>
+            <FooterLink href="/library">{nav('library')}</FooterLink>
+            <FooterLink href="/shop">{nav('shop')}</FooterLink>
+          </FooterCol>
+
+          <FooterCol title={t('connect')}>
+            <FooterLink href="/support">{nav('support')}</FooterLink>
+            <FooterLink href="/contact">{nav('contact')}</FooterLink>
+            <FooterLink href="/support">{t('newsletter')}</FooterLink>
+          </FooterCol>
         </div>
 
-        <div>
-          <h2 className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-tan">
-            {t('visit')}
-          </h2>
-          <p className="text-sm text-cream/80">{t('address')}</p>
-          <p className="mt-2 text-sm text-cream/80">{t('hours')}</p>
+        <hr className="my-11 border-paper/15" />
+        <div className="flex flex-wrap justify-between gap-3 text-xs text-paper/55">
+          <span>
+            © {year} {meta('siteName')}. {t('rights')}
+          </span>
+          <span>{t('address')}</span>
         </div>
-
-        <nav aria-label="Footer">
-          <h2 className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-tan">
-            {t('explore')}
-          </h2>
-          <ul className="space-y-2 text-sm text-cream/80">
-            <li>
-              <Link href="/whats-on" className="hover:text-cream">
-                {nav('whatsOn')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/programs" className="hover:text-cream">
-                {nav('programs')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/library" className="hover:text-cream">
-                {nav('library')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/shop" className="hover:text-cream">
-                {nav('shop')}
-              </Link>
-            </li>
-          </ul>
-        </nav>
-
-        <div>
-          <h2 className="mb-4 text-xs font-black uppercase tracking-[0.18em] text-tan">
-            {t('connect')}
-          </h2>
-          <ul className="space-y-2 text-sm text-cream/80">
-            <li>
-              <Link href="/support" className="hover:text-cream">
-                {nav('support')}
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:text-cream">
-                {nav('contact')}
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-cream/10 px-6 py-6 text-center text-xs text-stone">
-        © {year} {meta('siteName')}. {t('rights')}
       </div>
     </footer>
+  );
+}
+
+function FooterCol({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <nav>
+      <h2 className="mb-3.5 text-[11px] font-extrabold uppercase tracking-[0.18em] text-gold">
+        {title}
+      </h2>
+      <div className="space-y-2">{children}</div>
+    </nav>
+  );
+}
+
+function FooterLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link href={href} className="block text-sm text-paper/75 transition hover:text-paper">
+      {children}
+    </Link>
   );
 }

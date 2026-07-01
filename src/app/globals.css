@@ -3,24 +3,20 @@
 @tailwind utilities;
 
 /**
- * AHOC design tokens — the elevated palette (see docs/BRAND.md).
- * Exposed as CSS variables so sections can be re-themed without a rebuild.
+ * AHOC design tokens — "editorial gallery" (see docs/BRAND.md).
+ * Light/ivory base; brand (maroon/gold) used as minimal accents.
  */
 @layer base {
   :root {
-    /* heritage core */
+    /* neutral base */
+    --color-paper: #f6f1e7;
+    --color-paper-2: #efe8d9;
+    --color-line: #ded3c0;
+    --color-ink: #231317;
+    /* brand accents */
     --color-maroon: #512934;
-    --color-plum: #2e141c;
-    --color-tan: #a38054;
-    --color-cream: #e3d0bb;
-    /* elevated system */
     --color-gold: #e0a63c;
-    --color-green: #1e7a50;
-    --color-lapis: #1f5673;
-    --color-vermilion: #d9482b;
-    --color-ivory: #f5eee2;
-    --color-ink: #241318;
-    --color-stone: #8a7a6b;
+    --color-cream: #e3d0bb;
   }
 
   html {
@@ -28,18 +24,16 @@
   }
 
   body {
-    @apply bg-maroon font-sans text-cream antialiased;
+    @apply bg-paper font-sans text-ink antialiased;
   }
 
-  /* Amharic content renders with the Ge'ez serif automatically. */
+  /* Amharic content renders with the Ge'ez sans automatically. */
   :lang(am) {
     @apply font-ethiopic;
   }
-}
 
-@layer components {
-  /* "The Arch" — signature motif used as an image mask / container. */
-  .arch {
-    @apply overflow-hidden rounded-arch;
+  ::selection {
+    background: var(--color-maroon);
+    color: var(--color-paper);
   }
 }

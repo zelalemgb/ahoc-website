@@ -4,6 +4,11 @@
     "tagline": "Hub of Ethiopia",
     "description": "A house for art, ideas and community in Addis Ababa — exhibitions, screenings, performances, a library, a shop and a café, under one arch."
   },
+  "announcement": {
+    "lead": "Grand opening",
+    "date": "25 May",
+    "tail": "the Gallery, Audiovisual Centre, Library & Fili Coffee. Book your visit →"
+  },
   "nav": {
     "whatsOn": "What's On",
     "spaces": "Spaces",
@@ -11,28 +16,65 @@
     "library": "Library",
     "visit": "Visit",
     "shop": "Shop",
-    "news": "News & Stories",
     "support": "Support AHOC",
     "contact": "Contact",
-    "tickets": "Tickets"
+    "tickets": "Tickets",
+    "search": "Search"
   },
   "home": {
-    "welcome": "Welcome",
-    "heroTitle": "A house for art, ideas & community",
-    "heroBody": "Where Addis Ababa's heritage meets contemporary expression — exhibitions, screenings, performances, books and coffee, under one arch.",
     "planVisit": "Plan your visit",
-    "seeWhatsOn": "See what's on",
-    "onView": "On View",
-    "upcoming": "Upcoming",
-    "past": "Past"
+    "featured": {
+      "tag": "On view · Main Gallery",
+      "title": "Gebeya",
+      "blurb": "Twelve Ethiopian artists reimagine the marketplace as a site of exchange, memory and reinvention.",
+      "meta": "30 Jun – 18 Aug · Free entry"
+    },
+    "whatsOn": {
+      "kicker": "Exhibitions & Events",
+      "title": "What's On",
+      "viewAll": "View the full calendar",
+      "items": {
+        "e1": { "tag": "Exhibition", "title": "Glorious Tragedy", "when": "Opens 12 July" },
+        "e2": { "tag": "Screening", "title": "Bare Foot in Rome", "when": "Fri 18 July · 19:00" },
+        "e3": { "tag": "Performance", "title": "Local Cocktail Nights", "when": "Every Friday · Courtyard" }
+      }
+    },
+    "statement": {
+      "kicker": "Our mission",
+      "body": "More than a space — a hub where art, tradition and <gold>innovation</gold> converge.",
+      "amharic": "የኢትዮጵያ የባህል ማዕከል"
+    },
+    "spaces": {
+      "kicker": "The building",
+      "title": "Four spaces, one threshold",
+      "viewAll": "Explore the spaces",
+      "items": {
+        "gallery": "Art Gallery",
+        "audiovisual": "Audiovisual Centre",
+        "library": "Library & Shop",
+        "cafe": "Fili Coffee"
+      }
+    },
+    "visit": {
+      "title": "Plan your visit",
+      "hoursLabel": "Hours",
+      "hours": "Tue – Sun · 10:00–19:00",
+      "whereLabel": "Where",
+      "where": "Grand Palace, Zewditu Court · Addis Ababa",
+      "admissionLabel": "Admission",
+      "admission": "Galleries free · Events ticketed",
+      "tickets": "Buy tickets",
+      "directions": "Directions & map"
+    }
   },
   "footer": {
     "visit": "Visit",
     "explore": "Explore",
     "connect": "Connect",
-    "address": "Grand Palace, Zewditu Court · Addis Ababa, Ethiopia",
-    "hours": "Tue – Sun · 10:00–19:00",
+    "planVisit": "Plan your visit",
+    "accessibility": "Accessibility",
     "newsletter": "Newsletter",
+    "address": "Grand Palace, Zewditu Court · Addis Ababa, Ethiopia",
     "rights": "All rights reserved."
   }
 }

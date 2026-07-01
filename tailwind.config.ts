@@ -1,42 +1,38 @@
 import type { Config } from 'tailwindcss';
 
 /**
- * AHOC design tokens.
- * Heritage core + the elevated system (see docs/BRAND.md).
- * Colours are exposed as CSS variables in globals.css so they can be
- * themed (e.g. light/dark sections) without rebuilding Tailwind.
+ * AHOC design tokens — "editorial gallery" system.
+ * Light/ivory base, ink text, with the brand used minimally: maroon as the
+ * single accent and gold as a rare spark. Colours are CSS variables (see
+ * globals.css) so sections can be re-themed without a rebuild.
  */
 const config: Config = {
   content: ['./src/**/*.{ts,tsx,mdx}'],
   theme: {
     extend: {
       colors: {
-        // heritage core
+        // neutral base
+        paper: 'var(--color-paper)', // warm off-white  #F6F1E7
+        'paper-2': 'var(--color-paper-2)', // #EFE8D9
+        line: 'var(--color-line)', // hairline border  #DED3C0
+        ink: 'var(--color-ink)', // near-black text  #231317
+        // brand accents (used sparingly)
         maroon: 'var(--color-maroon)', // Brown Coffee  #512934
-        plum: 'var(--color-plum)', // Midnight Coffee #2E141C
-        tan: 'var(--color-tan)', // Café au Lait  #A38054
-        cream: 'var(--color-cream)', // Dust Storm    #E3D0BB
-        // elevated system
         gold: 'var(--color-gold)', // Marigold      #E0A63C
-        green: 'var(--color-green)', // Meskel Green  #1E7A50
-        lapis: 'var(--color-lapis)', // Timket Lapis  #1F5673
-        vermilion: 'var(--color-vermilion)', // Berbere   #D9482B
-        ivory: 'var(--color-ivory)', // Injera Ivory  #F5EEE2
-        ink: 'var(--color-ink)', // Coffee Ink    #241318
-        stone: 'var(--color-stone)', // Stone         #8A7A6B
+        cream: 'var(--color-cream)', // Dust Storm    #E3D0BB
       },
       fontFamily: {
-        // Fraunces = expressive display voice, Archivo = neutral body,
-        // Noto Serif Ethiopic = Amharic (Ge'ez).
-        display: ['var(--font-display)', 'Georgia', 'serif'],
+        // Archivo = body/UI (Acumin stand-in). Archivo Black = display/wordmark.
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
-        ethiopic: ['var(--font-ethiopic)', 'serif'],
+        display: ['var(--font-display)', 'var(--font-sans)', 'sans-serif'],
+        ethiopic: ['var(--font-ethiopic)', 'sans-serif'],
       },
       borderRadius: {
-        // "The Arch" — the signature arch-top-window motif.
+        // "The Arch" — used only in the monogram now.
         arch: '1000px 1000px 14px 14px',
       },
       maxWidth: {
+        shell: '1360px',
         prose: '68ch',
       },
     },
