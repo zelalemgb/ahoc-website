@@ -76,6 +76,38 @@ export const event = defineType({
       type: 'boolean',
       initialValue: true,
     }),
+    defineField({
+      name: 'ticketTypes',
+      title: 'Ticket types',
+      description:
+        'Add one or more ticket types to enable ticketing/RSVP for this event. Price 0 = free RSVP.',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          name: 'ticketType',
+          fields: [
+            { name: 'name', title: 'Name', type: 'localeString' },
+            {
+              name: 'price',
+              title: 'Price (in Birr)',
+              type: 'number',
+              initialValue: 0,
+              validation: (r) => r.min(0),
+            },
+            { name: 'currency', title: 'Currency', type: 'string', initialValue: 'ETB' },
+            {
+              name: 'capacity',
+              title: 'Capacity',
+              type: 'number',
+              description: 'Leave blank for unlimited.',
+              validation: (r) => r.min(0),
+            },
+          ],
+          preview: { select: { title: 'name.en', subtitle: 'price' } },
+        },
+      ],
+    }),
   ],
   preview: {
     select: { title: 'title.en', subtitle: 'category', media: 'heroImage' },

@@ -36,6 +36,15 @@ export const EVENT_BY_SLUG_QUERY = defineQuery(`
   }
 `);
 
+// Ticketing view of an event: identity + ticket-type definitions.
+export const EVENT_TICKETING_QUERY = defineQuery(`
+  *[_type == "event" && slug.current == $slug][0]{
+    _id, title, slug, startDate, endDate, "image": heroImage, summary,
+    space->{title},
+    ticketTypes[]{ _key, name, price, currency, capacity }
+  }
+`);
+
 export const SPACES_QUERY = defineQuery(`
   *[_type == "space"] | order(order asc){
     _id, title, slug, summary, "image": heroImage
