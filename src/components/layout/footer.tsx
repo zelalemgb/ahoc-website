@@ -1,6 +1,5 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { LogoMark } from '@/components/ui/logo-mark';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -13,7 +12,6 @@ export function Footer() {
       <div className="mx-auto max-w-shell">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <LogoMark className="mb-5 h-14 w-auto" bg="var(--color-cream)" fg="var(--color-ink)" />
             <p className="font-display text-3xl uppercase leading-[0.95] tracking-tight">
               Addis House
               <br />
