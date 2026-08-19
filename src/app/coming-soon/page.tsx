@@ -22,11 +22,6 @@ export default function ComingSoonPage() {
           on its way.
         </h1>
 
-        <p className="mt-6 max-w-xl text-lg text-ink/70">
-          The gallery, audiovisual centre, library, shop and café are open now, with exhibitions and
-          events throughout the week. Come visit while we finish building our full website.
-        </p>
-
         <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-line px-6 py-3">
           <span className="h-2 w-2 rounded-full bg-gold" />
           <span className="text-sm font-bold uppercase tracking-[0.18em] text-maroon">
@@ -44,7 +39,7 @@ export default function ComingSoonPage() {
       </div>
 
       <footer className="absolute bottom-6 text-xs text-ink/40">
-        © {new Date().getFullYear()} Addis House of Culture · Hub of Ethiopia
+        © {new Date().getFullYear()} Addis House of Culture
       </footer>
     </main>
   );
