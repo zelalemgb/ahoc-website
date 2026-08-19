@@ -39,7 +39,7 @@ export default function ComingSoonPage() {
         </p>
 
         <p lang="am" className="mt-3 font-ethiopic text-lg text-ink/60">
-          ክፍት ነን · ድረ-ገጻችን በቅርቡ ይጀምራል
+          ድረ-ገጻችን በቅርቡ ይጀምራል
         </p>
       </div>
 
