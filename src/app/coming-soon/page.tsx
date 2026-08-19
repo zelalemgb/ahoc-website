@@ -17,9 +17,9 @@ export default function ComingSoonPage() {
         </p>
 
         <h1 className="mt-5 max-w-3xl font-display text-[clamp(38px,7vw,80px)] leading-[0.95] tracking-tight">
-          We&rsquo;re open —
+          Our website is
           <br />
-          our website is on its way.
+          on its way.
         </h1>
 
         <p className="mt-6 max-w-xl text-lg text-ink/70">
