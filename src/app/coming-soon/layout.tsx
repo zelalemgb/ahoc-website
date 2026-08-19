@@ -18,7 +18,8 @@ const ethiopic = Noto_Sans_Ethiopic({
 
 export const metadata: Metadata = {
   title: 'Coming soon · Addis House of Culture',
-  description: 'A new home for art, ideas and community in Addis Ababa. Website coming soon.',
+  description:
+    'Addis House of Culture is open in Addis Ababa, with exhibitions and events on now. Our website is coming soon.',
   robots: { index: false, follow: false },
 };
 
