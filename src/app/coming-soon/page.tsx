@@ -13,18 +13,18 @@ export default function ComingSoonPage() {
         <img src="/logo-mark.png" alt="" width={466} height={761} className="h-24 w-auto" />
 
         <p className="mt-8 text-xs font-extrabold uppercase tracking-[0.34em] text-maroon">
-          Addis House of Culture
+          Addis House of Culture · Addis Ababa
         </p>
 
-        <h1 className="mt-5 max-w-3xl font-display text-[clamp(38px,7vw,84px)] leading-[0.95] tracking-tight">
-          A new home for art,
+        <h1 className="mt-5 max-w-3xl font-display text-[clamp(38px,7vw,80px)] leading-[0.95] tracking-tight">
+          We&rsquo;re open —
           <br />
-          ideas &amp; community.
+          our website is on its way.
         </h1>
 
         <p className="mt-6 max-w-xl text-lg text-ink/70">
-          Our website is on its way. A gallery, audiovisual centre, library, shop and café —
-          opening soon in Addis Ababa.
+          The gallery, audiovisual centre, library, shop and café are open now, with exhibitions and
+          events throughout the week. Come visit while we finish building our full website.
         </p>
 
         <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-line px-6 py-3">
@@ -34,8 +34,12 @@ export default function ComingSoonPage() {
           </span>
         </div>
 
-        <p lang="am" className="mt-8 font-ethiopic text-lg text-ink/60">
-          ድረ-ገጻችን በቅርቡ ይጀምራል · አዲስ አበባ
+        <p className="mt-8 text-sm font-semibold text-ink/60">
+          Visit us · Grand Palace, Zewditu Court, Addis Ababa
+        </p>
+
+        <p lang="am" className="mt-3 font-ethiopic text-lg text-ink/60">
+          ክፍት ነን · ድረ-ገጻችን በቅርቡ ይጀምራል
         </p>
       </div>
 
