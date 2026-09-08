@@ -9,10 +9,13 @@ const intlMiddleware = createMiddleware(routing);
 // keep working while the site is hidden.
 const COMING_SOON = process.env.COMING_SOON === 'true';
 
-// Internal review: the DigitalOcean app hostname always serves the real site so
-// the team can preview it, while the public domains stay behind the holding
-// page. Unlisted rather than secret — fine for review, not for anything private.
-const PREVIEW_HOST = /\.ondigitalocean\.app$/;
+// Internal review: preview hosts always serve the real site so the team can see
+// it, while the public domains stay behind the holding page. Both the DO app
+// hostname and preview.<domain> qualify — the latter because the *.ondigitalocean.app
+// host isn't reliably reachable for everyone, whereas the team can already reach
+// our own domain. Unlisted rather than secret — fine for review, not for
+// anything private.
+const PREVIEW_HOST = /^preview\.|\.ondigitalocean\.app$/;
 
 function isPreview(req: NextRequest) {
   const host = req.headers.get('host') ?? '';
