@@ -7,7 +7,7 @@
   "announcement": {
     "lead": "Now open",
     "date": "Tue – Sun",
-    "tail": "Gallery, Audiovisual Centre, Library and Fili Coffee. Plan your visit →"
+    "tail": "Gallery, Audiovisual Centre, Library and Café. Plan your visit →"
   },
   "nav": {
     "whatsOn": "What's On",
@@ -52,7 +52,7 @@
         "gallery": "Art Gallery",
         "audiovisual": "Audiovisual Centre",
         "library": "Library & Shop",
-        "cafe": "Fili Coffee"
+        "cafe": "Café"
       }
     },
     "visit": {

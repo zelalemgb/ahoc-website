@@ -1,6 +1,6 @@
 import { defineType, defineField } from 'sanity';
 
-/** Space — Gallery, Audiovisual Center, Library & Shop, Fili Coffee, etc. */
+/** Space — Gallery, Audiovisual Center, Library & Shop, Café, etc. */
 export const space = defineType({
   name: 'space',
   title: 'Space',
