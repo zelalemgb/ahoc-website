@@ -28,7 +28,9 @@ export function Statement() {
           <img
             alt=""
             className="h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1577720580479-7d839d829c73?w=900&q=80&auto=format&fit=crop"
+            src="/images/statement.jpg"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

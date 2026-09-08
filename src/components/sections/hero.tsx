@@ -15,7 +15,9 @@ export function Hero() {
       <img
         alt=""
         className="absolute inset-0 h-full w-full object-cover"
-        src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=1800&q=80&auto=format&fit=crop"
+        src="/images/hero.jpg"
+        fetchPriority="high"
+        decoding="async"
       />
       <div className="absolute bottom-5 left-5 max-w-[440px] bg-paper p-8 pb-7 sm:bottom-12 sm:left-10">
         <p className="text-xs font-extrabold uppercase tracking-[0.2em] text-maroon">

@@ -18,18 +18,9 @@ type CmsEvent = {
 
 // Fallback demo data — used until events are published in Sanity.
 const DEMO = [
-  {
-    key: 'e1',
-    img: 'https://images.unsplash.com/photo-1531913764164-f85c52e6e654?w=800&q=80&auto=format&fit=crop',
-  },
-  {
-    key: 'e2',
-    img: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&q=80&auto=format&fit=crop',
-  },
-  {
-    key: 'e3',
-    img: 'https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=800&q=80&auto=format&fit=crop',
-  },
+  { key: 'e1', img: '/images/event-1.jpg' },
+  { key: 'e2', img: '/images/event-2.jpg' },
+  { key: 'e3', img: '/images/event-3.jpg' },
 ] as const;
 
 export async function WhatsOn() {
@@ -106,6 +97,8 @@ function EventCard({
           <img
             alt=""
             src={img}
+            loading="lazy"
+            decoding="async"
             className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
         ) : null}

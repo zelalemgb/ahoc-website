@@ -5,26 +5,10 @@ import { SectionHead } from './section-head';
 
 // Demo data — replaced by the `space` Sanity query once the CMS is connected.
 const SPACES = [
-  {
-    key: 'gallery',
-    am: 'የጥበብ አዳራሽ',
-    img: 'https://images.unsplash.com/photo-1577720580479-7d839d829c73?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    key: 'audiovisual',
-    am: 'የድምፅና ምስል',
-    img: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    key: 'library',
-    am: 'ቤተ-መጻሕፍት',
-    img: 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    key: 'cafe',
-    am: 'ቡና ቤት',
-    img: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&auto=format&fit=crop',
-  },
+  { key: 'gallery', am: 'የጥበብ አዳራሽ', img: '/images/space-gallery.jpg' },
+  { key: 'audiovisual', am: 'የድምፅና ምስል', img: '/images/space-audiovisual.jpg' },
+  { key: 'library', am: 'ቤተ-መጻሕፍት', img: '/images/space-library.jpg' },
+  { key: 'cafe', am: 'ቡና ቤት', img: '/images/space-cafe.jpg' },
 ] as const;
 
 export function Spaces() {
@@ -45,6 +29,8 @@ export function Spaces() {
                 <img
                   alt=""
                   src={s.img}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>

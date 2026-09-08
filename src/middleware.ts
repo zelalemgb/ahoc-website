@@ -9,8 +9,18 @@ const intlMiddleware = createMiddleware(routing);
 // keep working while the site is hidden.
 const COMING_SOON = process.env.COMING_SOON === 'true';
 
+// Internal review: the DigitalOcean app hostname always serves the real site so
+// the team can preview it, while the public domains stay behind the holding
+// page. Unlisted rather than secret — fine for review, not for anything private.
+const PREVIEW_HOST = /\.ondigitalocean\.app$/;
+
+function isPreview(req: NextRequest) {
+  const host = req.headers.get('host') ?? '';
+  return PREVIEW_HOST.test(host.split(':')[0] ?? '');
+}
+
 export default function middleware(req: NextRequest) {
-  if (COMING_SOON && !req.nextUrl.pathname.startsWith('/coming-soon')) {
+  if (COMING_SOON && !isPreview(req) && !req.nextUrl.pathname.startsWith('/coming-soon')) {
     const url = req.nextUrl.clone();
     url.pathname = '/coming-soon';
     return NextResponse.rewrite(url);

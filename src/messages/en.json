@@ -1,13 +1,13 @@
 {
   "meta": {
     "siteName": "Addis House of Culture",
-    "tagline": "Hub of Ethiopia",
-    "description": "A house for art, ideas and community in Addis Ababa — exhibitions, screenings, performances, a library, a shop and a café, under one arch."
+    "tagline": "Centre for Art & Ideas",
+    "description": "Addis House of Culture is a centre for art, research and public programs in Addis Ababa. Exhibitions, screenings and performances, with a library, shop and café."
   },
   "announcement": {
-    "lead": "Grand opening",
-    "date": "25 May",
-    "tail": "the Gallery, Audiovisual Centre, Library & Fili Coffee. Book your visit →"
+    "lead": "Now open",
+    "date": "Tue – Sun",
+    "tail": "Gallery, Audiovisual Centre, Library and Fili Coffee. Plan your visit →"
   },
   "nav": {
     "whatsOn": "What's On",
@@ -41,12 +41,12 @@
     },
     "statement": {
       "kicker": "Our mission",
-      "body": "More than a space — a hub where art, tradition and <gold>innovation</gold> converge.",
+      "body": "We exhibit, collect and interpret the art and ideas shaping <gold>contemporary Ethiopia</gold>.",
       "amharic": "የኢትዮጵያ የባህል ማዕከል"
     },
     "spaces": {
       "kicker": "The building",
-      "title": "Four spaces, one threshold",
+      "title": "Inside the building",
       "viewAll": "Explore the spaces",
       "items": {
         "gallery": "Art Gallery",
