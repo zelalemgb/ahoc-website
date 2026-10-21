@@ -16,13 +16,6 @@ type CmsEvent = {
   image?: Image;
 };
 
-// Fallback demo data — used until events are published in Sanity.
-const DEMO = [
-  { key: 'e1', img: '/images/event-1.jpg' },
-  { key: 'e2', img: '/images/event-2.jpg' },
-  { key: 'e3', img: '/images/event-3.jpg' },
-] as const;
-
 export async function WhatsOn() {
   const locale = await getLocale();
   const t = await getTranslations('home.whatsOn');
@@ -42,9 +35,13 @@ export async function WhatsOn() {
           title={t('title')}
           link={{ href: '/whats-on', label: t('viewAll') }}
         />
-        <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
-          {cms.length > 0
-            ? cms.map((e) => (
+        {cms.length === 0 ? (
+          // Nothing published yet. Say so, rather than filling the grid with
+          // invented exhibitions that read as real programming.
+          <p className="max-w-prose text-ink/70">{t('empty')}</p>
+        ) : (
+          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+            {cms.map((e) => (
                 <EventCard
                   key={e._id}
                   href={e.slug?.current ? `/whats-on/${e.slug.current}` : '/whats-on'}
@@ -60,18 +57,9 @@ export async function WhatsOn() {
                       : ''
                   }
                 />
-              ))
-            : DEMO.map((d) => (
-                <EventCard
-                  key={d.key}
-                  href="/whats-on"
-                  img={d.img}
-                  tag={t(`items.${d.key}.tag`)}
-                  title={t(`items.${d.key}.title`)}
-                  when={t(`items.${d.key}.when`)}
-                />
-              ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

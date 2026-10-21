@@ -13,37 +13,25 @@
     "contact": "Contact",
     "workWithUs": "Work with AHOC",
     "tickets": "Tickets",
-    "search": "Search"
+    "search": "Search",
+    "programs": "Programs",
+    "library": "Library",
+    "shop": "Shop",
+    "news": "News"
   },
   "home": {
     "planVisit": "Plan your visit",
     "featured": {
-      "tag": "On view · Main Gallery",
-      "title": "Gebeya",
-      "blurb": "Twelve Ethiopian artists reimagine the marketplace as a site of exchange, memory and reinvention.",
-      "meta": "30 Jun – 18 Aug · Free entry"
+      "onView": "On view",
+      "more": "Read more",
+      "emptyTitle": "Programme to be announced",
+      "emptyBlurb": "Current exhibitions and events will be listed here."
     },
     "whatsOn": {
       "kicker": "Exhibitions & Events",
       "title": "What's On",
       "viewAll": "View the full calendar",
-      "items": {
-        "e1": {
-          "tag": "Exhibition",
-          "title": "Glorious Tragedy",
-          "when": "Opens 12 July"
-        },
-        "e2": {
-          "tag": "Screening",
-          "title": "Bare Foot in Rome",
-          "when": "Fri 18 July · 19:00"
-        },
-        "e3": {
-          "tag": "Performance",
-          "title": "Local Cocktail Nights",
-          "when": "Every Friday · Courtyard"
-        }
-      }
+      "empty": "Nothing is on view at the moment. The full calendar lists what is coming."
     },
     "statement": {
       "kicker": "Our mission",
@@ -78,6 +66,57 @@
     "eyebrow": "Artists",
     "title": "Artists",
     "intro": "Artists exhibiting and working with Addis House of Culture."
+  },
+  "search": {
+    "eyebrow": "Search",
+    "title": "Search",
+    "label": "Search the site",
+    "placeholder": "Exhibitions, spaces, artists, visiting…",
+    "submit": "Search",
+    "prompt": "Type a word or two — an exhibition, a space, an artist, or something practical like opening hours.",
+    "count": "{count, plural, =0 {No results for “{q}”} one {# result for “{q}”} other {# results for “{q}”}}",
+    "emptyHint": "Try a shorter or more general word.",
+    "kinds": {
+      "page": "Page",
+      "event": "Event",
+      "space": "Space",
+      "news": "News",
+      "artist": "Artist"
+    },
+    "targets": {
+      "whatsOn": {
+        "title": "What's On",
+        "keywords": "exhibitions performances screenings events calendar programme program talks workshops on view"
+      },
+      "spaces": {
+        "title": "Spaces",
+        "keywords": "gallery auditorium library gift shop cafe bar afro kitchen building rooms venue"
+      },
+      "artists": {
+        "title": "Artists",
+        "keywords": "artist artists exhibiting works makers"
+      },
+      "about": {
+        "title": "About Us",
+        "keywords": "about ahoc addis house of culture zewditu national palace history mission who we are"
+      },
+      "visit": {
+        "title": "Visit",
+        "keywords": "visit visiting opening hours times admission entry fee price 300 etb accessibility directions map getting here parking"
+      },
+      "workWithUs": {
+        "title": "Work with AHOC",
+        "keywords": "work with us collaborate collaboration partner partnership hire venue organise organize your own event support sponsor"
+      },
+      "contact": {
+        "title": "Contact",
+        "keywords": "contact email phone telephone address get in touch enquiries"
+      },
+      "newsletter": {
+        "title": "Newsletter",
+        "keywords": "newsletter subscribe sign up mailing list updates"
+      }
+    }
   },
   "footer": {
     "visit": "Visit",

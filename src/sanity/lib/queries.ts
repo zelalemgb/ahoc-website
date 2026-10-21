@@ -50,3 +50,21 @@ export const SPACES_QUERY = defineQuery(`
     _id, title, slug, summary, "image": heroImage
   }
 `);
+
+// Site search. Matches localised titles, summaries and portable-text bodies.
+// `$t` arrives already wildcarded (e.g. "gebey*") so partial words hit.
+// Only document types with a real detail route are included — linking to a
+// page that doesn't exist yet would be worse than omitting the result.
+export const SEARCH_QUERY = defineQuery(`
+  *[
+    (_type == "event" || _type == "space" || _type == "newsPost")
+    && (
+      title.en match $t || title.am match $t
+      || summary.en match $t || summary.am match $t
+      || excerpt.en match $t || excerpt.am match $t
+      || pt::text(body) match $t
+    )
+  ][0...30]{
+    _id, _type, title, slug, summary, excerpt
+  }
+`);

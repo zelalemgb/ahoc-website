@@ -1,21 +1,13 @@
-/* eslint-disable @next/next/no-img-element */
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { PageShell } from '@/components/layout/page-shell';
+import { ARTISTS } from '@/lib/artists';
 
 /**
  * Artists index. The October brief supplied six names and nothing else — no
  * portraits, bios or links — so each card renders a placeholder frame. When the
  * material arrives this should move to a Sanity `artist` document type, the way
- * events and spaces already work; the shape here is deliberately close to that.
+ * events and spaces already work.
  */
-const ARTISTS = [
-  'Zelalem Merga',
-  'Kidane Gizaw',
-  'Dawit Geressu',
-  'Joey Lawrence',
-  'Tibeb Sirak',
-  'Michael Hailu',
-] as const;
 
 export default async function ArtistsPage({
   params,

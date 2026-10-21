@@ -9,5 +9,5 @@ export default async function SupportPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('nav');
-  return <PageShell eyebrow="Get involved" title={t('support')} />;
+  return <PageShell eyebrow="Get involved" title={t('workWithUs')} />;
 }
