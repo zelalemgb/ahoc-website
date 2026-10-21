@@ -2,22 +2,16 @@
   "meta": {
     "siteName": "Addis House of Culture",
     "tagline": "Centre for Art & Ideas",
-    "description": "Addis House of Culture is a centre for art, research and public programs in Addis Ababa. Exhibitions, screenings and performances, with a library, shop and café."
-  },
-  "announcement": {
-    "lead": "Now open",
-    "date": "Tue – Sun",
-    "tail": "Gallery, Audiovisual Centre, Library and Café. Plan your visit →"
+    "description": "Addis House of Culture is a centre for art, research and public programs in Addis Ababa. Exhibitions, screenings and performances, with a library, gift shop and café."
   },
   "nav": {
     "whatsOn": "What's On",
     "spaces": "Spaces",
-    "programs": "Programs",
-    "library": "Library",
+    "artists": "Artists",
+    "about": "About Us",
     "visit": "Visit",
-    "shop": "Shop",
-    "support": "Support AHOC",
     "contact": "Contact",
+    "workWithUs": "Work with AHOC",
     "tickets": "Tickets",
     "search": "Search"
   },
@@ -34,9 +28,21 @@
       "title": "What's On",
       "viewAll": "View the full calendar",
       "items": {
-        "e1": { "tag": "Exhibition", "title": "Glorious Tragedy", "when": "Opens 12 July" },
-        "e2": { "tag": "Screening", "title": "Bare Foot in Rome", "when": "Fri 18 July · 19:00" },
-        "e3": { "tag": "Performance", "title": "Local Cocktail Nights", "when": "Every Friday · Courtyard" }
+        "e1": {
+          "tag": "Exhibition",
+          "title": "Glorious Tragedy",
+          "when": "Opens 12 July"
+        },
+        "e2": {
+          "tag": "Screening",
+          "title": "Bare Foot in Rome",
+          "when": "Fri 18 July · 19:00"
+        },
+        "e3": {
+          "tag": "Performance",
+          "title": "Local Cocktail Nights",
+          "when": "Every Friday · Courtyard"
+        }
       }
     },
     "statement": {
@@ -46,35 +52,42 @@
     },
     "spaces": {
       "kicker": "The building",
-      "title": "Inside the building",
+      "title": "Spaces",
       "viewAll": "Explore the spaces",
       "items": {
-        "gallery": "Art Gallery",
-        "audiovisual": "Audiovisual Centre",
-        "library": "Library & Shop",
-        "cafe": "Café"
+        "gallery": "Gallery",
+        "auditorium": "Auditorium",
+        "library": "Library & Gift Shop",
+        "cafe": "Café & Bar"
       }
     },
     "visit": {
       "title": "Plan your visit",
       "hoursLabel": "Hours",
-      "hours": "Tue – Sun · 10:00–19:00",
+      "hours": "Tue – Fri · 9:30–17:00",
+      "hoursWeekend": "Sat – Sun · 10:00–18:00",
       "whereLabel": "Where",
       "where": "Grand Palace, Zewditu Court · Addis Ababa",
       "admissionLabel": "Admission",
-      "admission": "Galleries free · Events ticketed",
-      "tickets": "Buy tickets",
+      "admission": "Palace entrance fee · 300 ETB for gallery visits",
+      "admissionNote": "Full information on Palace Museum entry fees",
       "directions": "Directions & map"
     }
   },
+  "artists": {
+    "eyebrow": "Artists",
+    "title": "Artists",
+    "intro": "Artists exhibiting and working with Addis House of Culture."
+  },
   "footer": {
     "visit": "Visit",
-    "explore": "Explore",
     "connect": "Connect",
+    "follow": "Follow",
     "planVisit": "Plan your visit",
     "accessibility": "Accessibility",
     "newsletter": "Newsletter",
     "address": "Grand Palace, Zewditu Court · Addis Ababa, Ethiopia",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "webmail": "Staff webmail"
   }
 }

@@ -3,12 +3,13 @@ import { Link } from '@/i18n/navigation';
 import { Logo } from '@/components/ui/logo';
 import { LocaleSwitcher } from '@/components/layout/locale-switcher';
 
+// Four sections per the team's October brief. Programs folds into What's On;
+// Library and Shop are now rooms described on the Spaces page, not destinations.
 const NAV = [
   { key: 'whatsOn', href: '/whats-on' },
   { key: 'spaces', href: '/spaces' },
-  { key: 'programs', href: '/programs' },
-  { key: 'library', href: '/library' },
-  { key: 'visit', href: '/visit' },
+  { key: 'artists', href: '/artists' },
+  { key: 'about', href: '/about' },
 ] as const;
 
 export function Header() {
@@ -33,14 +34,11 @@ export function Header() {
 
         <div className="flex items-center gap-4 text-[13px] font-bold">
           <LocaleSwitcher />
+          {/* Admission is the Palace's own entrance fee, so AHOC sells nothing
+              here — the Tickets button is gone. The /tickets routes and payment
+              code are left in place pending a decision on ticketed events. */}
           <Link href="/search" className="hidden sm:inline hover:text-maroon">
             {t('search')}
-          </Link>
-          <Link
-            href="/tickets"
-            className="rounded-sm bg-maroon px-5 py-2.5 text-paper transition hover:bg-ink"
-          >
-            {t('tickets')}
           </Link>
         </div>
       </div>

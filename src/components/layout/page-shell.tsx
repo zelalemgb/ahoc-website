@@ -7,10 +7,13 @@ import type { ReactNode } from 'react';
 export function PageShell({
   eyebrow,
   title,
+  wide = false,
   children,
 }: {
   eyebrow?: string;
   title: string;
+  /** Drop the prose measure — for pages whose body is a grid, not running text. */
+  wide?: boolean;
   children?: ReactNode;
 }) {
   return (
@@ -23,7 +26,7 @@ export function PageShell({
           {title}
         </h1>
       </header>
-      <div className="mt-10 max-w-prose text-ink/70">
+      <div className={`mt-10 text-ink/70${wide ? '' : ' max-w-prose'}`}>
         {children ?? <p>This section is coming soon.</p>}
       </div>
     </div>

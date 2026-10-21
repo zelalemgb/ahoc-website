@@ -1,6 +1,14 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 
+// PLACEHOLDER: the brief asked for social links but didn't supply the accounts.
+// Swap each href for the real profile URL — the labels are already correct.
+const SOCIAL = [
+  { label: 'Instagram', href: '#' },
+  { label: 'Facebook', href: '#' },
+  { label: 'YouTube', href: '#' },
+] as const;
+
 export function Footer() {
   const t = useTranslations('footer');
   const nav = useTranslations('nav');
@@ -28,17 +36,24 @@ export function Footer() {
             <FooterLink href="/visit">{t('accessibility')}</FooterLink>
           </FooterCol>
 
-          <FooterCol title={t('explore')}>
-            <FooterLink href="/spaces">{nav('spaces')}</FooterLink>
-            <FooterLink href="/programs">{nav('programs')}</FooterLink>
-            <FooterLink href="/library">{nav('library')}</FooterLink>
-            <FooterLink href="/shop">{nav('shop')}</FooterLink>
-          </FooterCol>
-
           <FooterCol title={t('connect')}>
-            <FooterLink href="/support">{nav('support')}</FooterLink>
+            <FooterLink href="/support">{nav('workWithUs')}</FooterLink>
             <FooterLink href="/contact">{nav('contact')}</FooterLink>
             <FooterLink href="/support">{t('newsletter')}</FooterLink>
+          </FooterCol>
+
+          <FooterCol title={t('follow')}>
+            {SOCIAL.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-paper/75 transition hover:text-paper"
+              >
+                {s.label}
+              </a>
+            ))}
           </FooterCol>
         </div>
 
@@ -47,7 +62,20 @@ export function Footer() {
           <span>
             © {year} {meta('siteName')}. {t('rights')}
           </span>
-          <span>{t('address')}</span>
+          <span className="flex flex-wrap gap-x-3 gap-y-1">
+            <span>{t('address')}</span>
+            {/* Staff utility, not visitor navigation — kept in the bottom rule
+                rather than the columns above. Plain <a>: /webmail is a redirect
+                declared in next.config.mjs, so it sits outside locale routing. */}
+            <a
+              href="/webmail"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-paper/80"
+            >
+              {t('webmail')}
+            </a>
+          </span>
         </div>
       </div>
     </footer>

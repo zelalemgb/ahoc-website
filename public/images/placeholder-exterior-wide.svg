@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Placeholder: wide exterior shot of the house">
+  <rect width="1600" height="900" fill="#2b1a20"/>
+  <g fill="none" stroke="#a38054" stroke-opacity="0.35" stroke-width="2">
+    <rect x="40" y="40" width="1520" height="820"/>
+  </g>
+  <g transform="translate(800 420)" fill="none" stroke="#a38054" stroke-opacity="0.55" stroke-width="3">
+    <path d="M-70 60 L-70 -10 A70 70 0 0 1 70 -10 L70 60 Z"/>
+  </g>
+  <text x="800" y="560" text-anchor="middle" fill="#e3d0bb" fill-opacity="0.75"
+        font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+        font-size="30" letter-spacing="6">PLACEHOLDER</text>
+  <text x="800" y="606" text-anchor="middle" fill="#e3d0bb" fill-opacity="0.45"
+        font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+        font-size="22" letter-spacing="2">Wide exterior shot of the house</text>
+</svg>

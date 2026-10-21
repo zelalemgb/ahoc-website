@@ -8,11 +8,9 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-3" aria-label={t('siteName')}>
       <LogoMark className="h-11 w-auto" />
+      {/* Wordmark only — the team asked for no strapline beneath the name. */}
       <span className="font-display text-[15px] uppercase leading-none tracking-[0.14em]">
         Addis House of Culture
-        <span className="mt-[3px] block font-sans text-[9px] font-semibold tracking-[0.32em] text-maroon">
-          {t('tagline')}
-        </span>
       </span>
     </Link>
   );

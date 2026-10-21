@@ -5,10 +5,10 @@ import { SectionHead } from './section-head';
 
 // Demo data — replaced by the `space` Sanity query once the CMS is connected.
 const SPACES = [
-  { key: 'gallery', am: 'የጥበብ አዳራሽ', img: '/images/space-gallery.jpg' },
-  { key: 'audiovisual', am: 'የድምፅና ምስል', img: '/images/space-audiovisual.jpg' },
-  { key: 'library', am: 'ቤተ-መጻሕፍት', img: '/images/space-library.jpg' },
-  { key: 'cafe', am: 'ቡና ቤት', img: '/images/space-cafe.jpg' },
+  { key: 'gallery', am: 'ጋለሪ', img: '/images/space-gallery.jpg' },
+  { key: 'auditorium', am: 'አዳራሽ', img: '/images/space-audiovisual.jpg' },
+  { key: 'library', am: 'ቤተ-መጻሕፍትና የስጦታ ሱቅ', img: '/images/space-library.jpg' },
+  { key: 'cafe', am: 'ካፌና ባር', img: '/images/space-cafe.jpg' },
 ] as const;
 
 export function Spaces() {

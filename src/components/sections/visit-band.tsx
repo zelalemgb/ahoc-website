@@ -5,10 +5,14 @@ import { ButtonLink } from '@/components/ui/button';
 export function VisitBand() {
   const t = useTranslations('home.visit');
 
+  // PLACEHOLDER: the brief cites "[palace museum website]" without a URL.
+  const PALACE_MUSEUM_URL = '#';
+
   const info = [
-    { b: t('hoursLabel'), v: t('hours') },
-    { b: t('whereLabel'), v: t('where') },
-    { b: t('admissionLabel'), v: t('admission') },
+    // Weekday and weekend hours differ, so this cell carries two lines.
+    { b: t('hoursLabel'), v: [t('hours'), t('hoursWeekend')] },
+    { b: t('whereLabel'), v: [t('where')] },
+    { b: t('admissionLabel'), v: [t('admission')] },
   ];
 
   return (
@@ -24,16 +28,27 @@ export function VisitBand() {
                 <b className="mb-1 block text-[11px] font-extrabold uppercase tracking-[0.14em] text-maroon">
                   {i.b}
                 </b>
-                {i.v}
+                {i.v.map((line) => (
+                  <span key={line} className="block">
+                    {line}
+                  </span>
+                ))}
               </div>
             ))}
           </div>
+          <p className="mt-4 text-[13px] text-ink/60">
+            <a
+              href={PALACE_MUSEUM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-maroon"
+            >
+              {t('admissionNote')} →
+            </a>
+          </p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <ButtonLink href="/tickets">{t('tickets')} →</ButtonLink>
-          <ButtonLink href="/visit" variant="ghost">
-            {t('directions')}
-          </ButtonLink>
+          <ButtonLink href="/visit">{t('directions')}</ButtonLink>
         </div>
       </div>
     </section>
