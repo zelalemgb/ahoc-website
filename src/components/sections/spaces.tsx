@@ -4,11 +4,12 @@ import { Link } from '@/i18n/navigation';
 import { SectionHead } from './section-head';
 
 // Demo data — replaced by the `space` Sanity query once the CMS is connected.
+// `caption` names the partner operating a space, where there is one.
 const SPACES = [
   { key: 'gallery', am: 'ጋለሪ', img: '/images/space-gallery.jpg' },
   { key: 'auditorium', am: 'አዳራሽ', img: '/images/space-audiovisual.jpg' },
   { key: 'library', am: 'ቤተ-መጻሕፍትና የስጦታ ሱቅ', img: '/images/space-library.jpg' },
-  { key: 'cafe', am: 'ካፌና ባር', img: '/images/space-cafe.jpg' },
+  { key: 'cafe', am: 'ካፌና ባር', img: '/images/space-cafe.jpg', caption: true },
 ] as const;
 
 export function Spaces() {
@@ -38,6 +39,11 @@ export function Spaces() {
               <small lang="am" className="mt-0.5 block font-ethiopic text-[13px] text-ink/50">
                 {s.am}
               </small>
+              {'caption' in s ? (
+                <small className="mt-0.5 block text-[13px] text-maroon">
+                  {t(`caption.${s.key}`)}
+                </small>
+              ) : null}
             </Link>
           ))}
         </div>

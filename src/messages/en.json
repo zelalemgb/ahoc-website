@@ -47,6 +47,9 @@
         "auditorium": "Auditorium",
         "library": "Library & Gift Shop",
         "cafe": "Café & Bar"
+      },
+      "caption": {
+        "cafe": "with Afro Kitchen"
       }
     },
     "visit": {
@@ -66,6 +69,16 @@
     "eyebrow": "Artists",
     "title": "Artists",
     "intro": "Artists exhibiting and working with Addis House of Culture."
+  },
+  "spaces": {
+    "eyebrow": "The building",
+    "intro": "Four spaces, open to the public during gallery hours.",
+    "items": {
+      "gallery": "Rotating exhibitions of emerging and established artists.",
+      "auditorium": "Workshops, panel discussions, film screenings and live performances.",
+      "library": "Selected titles, prints and artisanal crafts.",
+      "cafe": "Coffee, cocktails and a menu of Ethiopian and international dishes, with Afro Kitchen."
+    }
   },
   "search": {
     "eyebrow": "Search",
