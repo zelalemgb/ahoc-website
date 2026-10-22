@@ -54,13 +54,15 @@ export async function Hero() {
 
   return (
     <section className="relative h-[min(86vh,760px)] overflow-hidden bg-ink">
-      {/* PLACEHOLDER: the brief asks for a wide shot of the house exterior and
-          no such photograph was supplied. Drop the real image in and swap the
-          src — nothing else here needs to change. */}
+      {/* Exterior of the house: the stone façade, shuttered arched windows and
+          the café terrace. Cropped from a portrait original (the only finished
+          exterior in the team's photo folder), so it is 1200px wide — soft on
+          very large displays. Worth replacing with a true wide elevation shot
+          when one is taken. */}
       <img
         alt=""
         className="absolute inset-0 h-full w-full object-cover"
-        src="/images/placeholder-exterior-wide.svg"
+        src="/images/hero-exterior.jpg"
         fetchPriority="high"
         decoding="async"
       />
